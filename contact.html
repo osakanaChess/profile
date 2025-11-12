@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact | Kanki</title>
+    <title>お問い合わせ | まぐろろ</title>
     <meta name="description" content="お問い合わせやSNSリンク。フォームはデモ動作。" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
@@ -13,27 +13,26 @@
     <main>
       <section class="page-hero">
         <div class="container">
-          <h1 class="reveal">Contact</h1>
+          <h1 class="reveal">お問い合わせ</h1>
           <p class="lead reveal">ご相談・ご依頼・雑談もお気軽にどうぞ。</p>
         </div>
       </section>
 
-      <section class="container grid-2">
-        <div class="card reveal">
-          <h2>SNS</h2>
-          <ul class="links">
-            <li><a href="#">X (Twitter)</a></li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
-        </div>
-        <div class="card reveal">
-          <h2>お問い合わせ（デモ）</h2>
-          <form data-demo-contact>
-            <label>お名前<input name="name" required /></label>
-            <label>メール<input type="email" name="email" required /></label>
-            <label>内容<textarea name="message" rows="5" required></textarea></label>
+      <section class="container">
+        <div class="card reveal" style="max-width: 680px; margin-inline: auto;">
+          <h2>お問い合わせフォーム</h2>
+          <form data-demo-contact novalidate>
+            <label>お名前
+              <input name="name" autocomplete="name" aria-required="true" />
+            </label>
+            <label>メール
+              <input type="email" name="email" inputmode="email" autocomplete="email" aria-required="true" />
+            </label>
+            <label>内容
+              <textarea name="message" rows="5" aria-required="true"></textarea>
+            </label>
             <button class="btn primary" type="submit">送信</button>
+            <div class="form-status" aria-live="polite"></div>
           </form>
         </div>
       </section>
@@ -43,4 +42,3 @@
     <script src="src/app.js" defer></script>
   </body>
   </html>
-
